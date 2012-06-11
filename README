@@ -1,0 +1,22 @@
+PayPal NVP SDK mavenized
+
+PayPal NVP SDK downloaded from https://www.x.com/developers/paypal/documentation-tools/paypal-sdk-index (PP_Java_NVP_SDK_4302012.zip) with pom.xml to be able to build maven artifact with all dependencies required.
+
+You can then distribute the generated jar with your application (if you don't have your own maven repository) by adding custom repository definition into your parent POM:
+<repositories>
+    <repository>
+        <id><application>-repo</id>
+        <url>file://${basedir}/../com.<application>.parent/repo</url>
+    </repository>
+</repositories>
+
+Steps:
+1. Create "repo" folder inside your parent POM project
+2. Run mvn install:install-file -Dfile=<path to paypal-base jar file> -DgroupId=com.paypal.sdk \
+                         -DartifactId=paypal-base -Dversion=5.4.68 \
+                         -Dpackaging=jar -DlocalRepositoryPath=<path to your application repository>
+3. java -jar nexus-indexer-3.0.4-cli.jar --type full --index <path to index folder> --name <repository name> --repository <path to your application repository> --errors --legacy
+or short form: 
+java -jar nexus-indexer-3.0.4-cli.jar -t full -i <path to index folder> -n <repository name> -r <path to your application repository> -e -l
+You can read more about Nexu Indexer, how to use it and why you need it here https://docs.sonatype.org/display/M2ECLIPSE/Nexus+Indexer
+4. Copy generated nexus-maven-repository-index.{gz,properties,zip} into .index folder of your parent POM project

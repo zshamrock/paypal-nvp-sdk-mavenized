@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints>
+	<wsdl>
+		<environment name="live">
+			<port name="PayPalAPI">https://api.paypal.com/nvp</port>
+			<port name="PayPalAPIAA">https://api-aa.paypal.com/nvp</port>
+			<port name="PayPalAPI" threetoken="true">https://api-3t.paypal.com/nvp</port>
+			<port name="PayPalAPIAA" threetoken="true">https://api-aa-3t.paypal.com/nvp</port>
+		</environment>
+		<environment name="sandbox">
+			<port name="PayPalAPI">https://api.sandbox.paypal.com/nvp</port>
+			<port name="PayPalAPIAA">https://api.sandbox.paypal.com/nvp</port>
+			<port name="PayPalAPI" threetoken="true">https://api-3t.sandbox.paypal.com/nvp</port>
+			<port name="PayPalAPIAA" threetoken="true">https://api-aa-3t.sandbox.paypal.com/nvp</port>
+		</environment>
+		<environment name="beta-sandbox">
+			<port name="PayPalAPI">https://api.beta-sandbox.paypal.com/nvp</port>
+			<port name="PayPalAPIAA">https://api.beta-sandbox.paypal.com/nvp</port>
+			<port name="PayPalAPI" threetoken="true">https://api-3t.beta-sandbox.paypal.com/nvp</port>
+			<port name="PayPalAPIAA" threetoken="true">https://api-aa-3t.beta-sandbox.paypal.com/nvp</port>
+		</environment>		
+		
+    </wsdl>
+</endpoints>
