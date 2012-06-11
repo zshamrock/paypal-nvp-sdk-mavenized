@@ -1,4 +1,7 @@
+Attention: in order to get the latest PayPal NVP SDK download it from the official site (the one used here is PP_Java_NVP_SDK_4302012.zip)
+
 PayPal NVP SDK mavenized
+
 
 PayPal NVP SDK downloaded from https://www.x.com/developers/paypal/documentation-tools/paypal-sdk-index (PP_Java_NVP_SDK_4302012.zip) with pom.xml to be able to build maven artifact with all dependencies required.
 
